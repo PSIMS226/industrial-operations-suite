@@ -1,0 +1,4 @@
+/* index.css — Global reset */
+/* Ensures consistent box sizing and removes default browser margins */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
