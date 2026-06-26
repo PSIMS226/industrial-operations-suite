@@ -11,9 +11,9 @@
 	<groupId>com.industrialops</groupId>
 	<artifactId>industrial-operations-suite</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
-	<url/>
+	<name>Industrial Operations Suite</name>
+	<description>Full-stack manufacturing operations platform built with React, Spring Boot, and PostgreSQL. Features real-time equipment monitoring, work order management, inventory tracking, shift reporting, downtime analysis, and KPI dashboards.</description>
+	<url>https://github.com/PSIMS226/industrial-operations-suite</url>
 	<licenses>
 		<license/>
 	</licenses>
