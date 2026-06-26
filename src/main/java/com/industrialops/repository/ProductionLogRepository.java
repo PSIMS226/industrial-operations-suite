@@ -24,8 +24,7 @@ public interface ProductionLogRepository extends JpaRepository<ProductionLog, Lo
         FROM ProductionLog p
         WHERE p.periodStart >= :from AND p.periodEnd <= :to
         """)
-    Object[] aggregateKPIs(@Param("from") LocalDateTime from, @Param("to") LocalDateTime to);
-
+    List<Object[]> aggregateKPIs(@Param("from") LocalDateTime from, @Param("to") LocalDateTime to);
     @Query("""
         SELECT p.equipment.id, p.equipment.name, AVG(p.oee)
         FROM ProductionLog p

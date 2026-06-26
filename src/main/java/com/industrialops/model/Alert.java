@@ -34,7 +34,7 @@ public class Alert {
     @Column(nullable = false)
     private AlertStatus status = AlertStatus.ACTIVE;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "equipment_id")
     private Equipment equipment;
 

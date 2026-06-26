@@ -53,7 +53,8 @@ public class ProductionService {
     }
 
     public KpiSummaryDto buildKpiSummary(LocalDateTime from, LocalDateTime to) {
-        Object[] agg = productionLogRepository.aggregateKPIs(from, to);
+        List<Object[]> aggList = productionLogRepository.aggregateKPIs(from, to);
+        Object[] agg = aggList.isEmpty() ? new Object[6] : aggList.get(0);
 
         Double avgOee          = agg[0] != null ? ((Number) agg[0]).doubleValue() : null;
         Double avgAvailability = agg[1] != null ? ((Number) agg[1]).doubleValue() : null;

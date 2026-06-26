@@ -37,7 +37,7 @@ public class WorkOrder {
     @Enumerated(EnumType.STRING)
     private Priority priority = Priority.MEDIUM;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "equipment_id")
     private Equipment equipment;
 

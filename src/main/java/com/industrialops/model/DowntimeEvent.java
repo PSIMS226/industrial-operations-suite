@@ -17,7 +17,7 @@ public class DowntimeEvent {
     private Long id;
 
     @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "equipment_id", nullable = false)
     private Equipment equipment;
 
@@ -43,7 +43,7 @@ public class DowntimeEvent {
     @Enumerated(EnumType.STRING)
     private DowntimeStatus status = DowntimeStatus.OPEN;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "work_order_id")
     private WorkOrder linkedWorkOrder;
 
