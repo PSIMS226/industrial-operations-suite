@@ -121,7 +121,7 @@ export default function Dashboard() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
 
             {/* Recharts radial bar acts as a circular gauge */}
-            <div style={{ width: 140, height: 140 }}>
+            <div style={{ width: "140px", height: "140px", minWidth: "140px" }}>
               <ResponsiveContainer width="100%" height="100%">
                 <RadialBarChart
                   cx="50%" cy="50%"
