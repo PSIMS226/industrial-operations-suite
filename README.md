@@ -2,44 +2,43 @@
 
 A full-stack manufacturing operations platform for real-time equipment monitoring, work order management, inventory tracking, shift reporting, downtime analysis, and KPI dashboards.
 
+Designed to be used by floor supervisors, operators, and managers with no technical background - reducing reliance on IT support staff in manufacturing, mining, and production environments.
+
 Built as a portfolio project targeting manufacturing and industrial tech roles.
 
 ---
 
 ## Screenshots
 
-> Screenshots coming soon — see `/screenshots` folder after first deployment.
+> See `/screenshots` folder.
 
 ---
 
 ## Tech Stack
 
-**Frontend**
-- React 18 (Vite)
-- React Router DOM
-- Redux Toolkit
-- Recharts
-- Axios
-
-**Backend**
-- Java 21
-- Spring Boot 3.5
-- Spring Data JPA / Hibernate
-- PostgreSQL
-- Lombok
+- React 18, Vite, Redux Toolkit, Recharts, Axios
+- Java 21, Spring Boot 3.5, Spring Data JPA, PostgreSQL, Lombok
 
 ---
 
 ## Features
 
-- **Dashboard** — Live KPI overview: OEE, availability, performance, quality, active alerts, and ongoing downtime events
-- **Equipment** — Full equipment registry with status tracking (Operational, Under Maintenance, Offline)
-- **Work Orders** — Create, assign, start, complete, and cancel maintenance work orders with priority and cost tracking
-- **Inventory** — Track parts and materials with low-stock alerting
-- **Downtime** — Log and categorize downtime events with root cause analysis
-- **Production** — Log production runs with automatic OEE calculation (Availability × Performance × Quality)
-- **Shift Reports** — Shift-level summaries with operator and technician notes
-- **Alerts** — Multi-severity alert system (Info, Warning, Critical, Emergency) with acknowledgement workflow
+- **Dashboard** - Live KPI overview: OEE, availability, performance, quality, active alerts, and ongoing downtime
+- **Equipment** - Full equipment registry with status tracking (Operational, Under Maintenance, Offline)
+- **Work Orders** - Create, assign, start, complete, and cancel maintenance work orders with priority and cost tracking
+- **Inventory** - Track parts and materials with low-stock alerting
+- **Downtime** - Log and categorize downtime events with root cause analysis
+- **Production** - Log production runs with automatic OEE calculation (Availability x Performance x Quality)
+- **Shift Reports** - Shift-level summaries with operator and technician notes
+- **Alerts** - Multi-severity alert system (Info, Warning, Critical, Emergency) with acknowledgement workflow
+
+---
+
+## Who Is This For
+
+This platform was built with non-technical users in mind. A floor supervisor, shift operator, or plant manager can log equipment issues, track work orders, and view production KPIs without needing to contact IT. The interface uses plain language, color-coded statuses, and straightforward navigation so that anyone on the shop floor can use it from day one - no training required.
+
+This directly reduces the need for an on-site IT Support Analyst in manufacturing, mining, and production environments by putting operational visibility in the hands of the people who need it most.
 
 ---
 
@@ -47,22 +46,20 @@ Built as a portfolio project targeting manufacturing and industrial tech roles.
 
 ```
 industrial-operations-suite/
-├── src/                          # Spring Boot backend
-│   └── main/java/com/industrialops/
-│       ├── config/               # CORS, exception handling
-│       ├── controller/           # REST API endpoints
-│       ├── dto/                  # Data transfer objects
-│       ├── model/                # JPA entities
-│       ├── repository/           # Spring Data repositories
-│       └── service/              # Business logic
-├── frontend-react/               # React frontend (Vite)
-│   └── src/
-│       ├── Components/           # Shared UI components
-│       ├── Pages/                # Page-level components
-│       └── Services/             # Axios API client
-├── database/                     # SQL seed data
-├── docs/                         # Additional documentation
-└── pom.xml                       # Maven build configuration
+- src/                         # Spring Boot backend
+  - config/                    # CORS, exception handling
+  - controller/                # REST API endpoints
+  - dto/                       # Data transfer objects
+  - model/                     # JPA entities
+  - repository/                # Spring Data repositories
+  - service/                   # Business logic
+- frontend-react/              # React frontend (Vite)
+  - Components/                # Shared UI components
+  - Pages/                     # Page-level components
+  - Services/                  # Axios API client
+- database/                    # SQL seed data
+- docs/                        # Additional documentation
+- pom.xml                      # Maven build configuration
 ```
 
 ---
@@ -77,19 +74,22 @@ industrial-operations-suite/
 
 ### Database Setup
 
-1. Create a PostgreSQL database:
+Create a PostgreSQL database:
+
 ```sql
 CREATE DATABASE industrial_ops;
 ```
 
-2. Run the seed data:
+Run the seed data:
+
 ```bash
 psql -U postgres -d industrial_ops -f database/sample_data.sql
 ```
 
 ### Backend Setup
 
-1. Create `src/main/resources/application-local.properties`:
+Create `src/main/resources/application-local.properties`:
+
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/industrial_ops
 spring.datasource.username=your_db_username
@@ -97,7 +97,8 @@ spring.datasource.password=your_db_password
 app.cors.allowed-origins=http://localhost:5173
 ```
 
-2. Start the backend:
+Start the backend:
+
 ```bash
 ./mvnw spring-boot:run
 ```
@@ -133,26 +134,24 @@ Frontend runs on `http://localhost:5173`
 
 ## Key Design Decisions
 
-- **Spring profiles** — Local credentials are kept in `application-local.properties` (gitignored). The public repo contains only placeholder values.
-- **`FetchType.EAGER`** — All `@ManyToOne` relationships use eager loading to avoid Hibernate lazy-initialization exceptions during JSON serialization.
-- **`Promise.allSettled`** — The dashboard fires all API calls simultaneously. If one fails, the rest still render.
-- **OEE calculation** — Computed automatically on save via `@PrePersist`/`@PreUpdate` hooks on `ProductionLog`: `OEE = Availability × Performance × Quality`
+- **Spring profiles** - Local credentials are kept in `application-local.properties` (gitignored). The public repo contains only placeholder values.
+- **Eager loading** - All relationships use eager loading to avoid serialization issues during API responses.
+- **Promise.allSettled** - The dashboard fires all API calls simultaneously. If one fails, the rest still render.
+- **OEE calculation** - Computed automatically on save via `@PrePersist`/`@PreUpdate` hooks: `OEE = Availability x Performance x Quality`
 
 ---
 
 ## Known Issues / Roadmap
 
-- [ ] OEE gauge color threshold not yet implemented
-- [ ] `analytics-python` and `powerbi` folders are stubs for future analytics integration
-- [ ] No authentication — all endpoints are currently public
-- [ ] Unit tests are minimal — integration tests planned
+- [ ] OEE gauge color threshold styling in progress
+- [ ] Analytics-python and PowerBI folders are stubs for future integration
+- [ ] No authentication - all endpoints are currently public
+- [ ] Unit tests are minimal - integration tests planned
 
 ---
 
 ## Author
 
-## Author
-
-Paul Sims — Computer Information Systems & Business Administration/Finance  
-Colorado State University  
+Paul Sims - Computer Information Systems & Business Administration/Finance
+Colorado State University
 [GitHub](https://github.com/PSIMS226)
