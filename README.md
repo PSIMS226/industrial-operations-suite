@@ -1,8 +1,8 @@
 # Industrial Operations Suite
 
-A full-stack manufacturing operations platform for real-time equipment monitoring, work order management, inventory tracking, shift reporting, downtime analysis, and KPI dashboards.
+A manufacturing operations platform for equipment monitoring, work order management, inventory tracking, shift reporting, downtime analysis, and KPI dashboards.
 
-Designed to be used by floor supervisors, operators, and managers with no technical background - reducing reliance on IT support staff in manufacturing, mining, and production environments.
+This suite is designed to be used by floor supervisors, operators, and managers with no technical background. Proper implementation of this program can elimiante the need for an IT employee.
 
 Built as a portfolio project targeting manufacturing and industrial tech roles.
 
