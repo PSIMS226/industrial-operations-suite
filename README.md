@@ -1,26 +1,11 @@
-# Industrial Operations Suite
-
-A manufacturing operations platform for equipment monitoring, work order management, inventory tracking, shift reporting, downtime analysis, and KPI dashboards.
-
-This suite is designed to be used by floor supervisors, operators, and managers with no technical background. Proper implementation of this program can elimiante the need for an IT employee.
-
-Built as a portfolio project targeting manufacturing and industrial tech roles.
-
----
 
 See Screenshots Folder For Specific GUI photos
----
-# Industrial Operations Suite
-
-**A unified operational layer for the modern plant floor and a foundation for the autonomous operations to come.**
 
 > Machines on the factory floor are already automated. *Operations* are not. The distance between a plant full of automated equipment and a genuinely automated operation is not measured in robots or PLCs — it is measured in the decisions that still run on human judgment, tribal knowledge, and spreadsheets. This project is built for that gap.
 
----
 
 ## Overview
 
-Most industrial facilities do not suffer from a lack of automation at the machine level. Individual assets presses, CNC cells, conveyors, packaging lines — have run themselves reliably for decades. What remains stubbornly manual is the layer above the machines: knowing what is running, what is down and why, what to make next, what to fix first, and what to order before it runs out. That knowledge is typically scattered across disconnected systems, paper logs, and the memory of a few experienced people.
 
 The **Industrial Operations Suite** consolidates that operational picture into a single system. It brings equipment health, work orders, inventory, downtime, production output, alerting, and shift handoffs under one data model and one interface — the connective tissue that a plant needs before any higher-order automation is even possible.
 
