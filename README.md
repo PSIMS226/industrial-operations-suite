@@ -1,9 +1,6 @@
 
 See Screenshots Folder For Specific GUI photos
 
-### Where this project fits
-
-The Industrial Operations Suite is deliberately positioned at the base of that arc. It is the visibility-and-unification layer - the substrate that everything above it depends on. Its roadmap follows the same trajectory: from describing operations, to predicting them, to eventually recommending and orchestrating them.
 
 ---
 
