@@ -27,7 +27,7 @@ The suite is a full-stack application built around a clean separation between a 
 
 **Backend**
 - **Java 21** and **Spring Boot 3.5** exposing a documented REST API
-- **JPA / Hibernate** domain entities modeling core manufacturing concepts — equipment status, maintenance windows, downtime events, work-order lifecycles
+- **JPA / Hibernate** domain entities modeling core manufacturing concepts - equipment status, maintenance windows, downtime events, work-order lifecycles
 - **JPQL** queries for operational logic such as overdue-maintenance detection
 - **PostgreSQL** as the persistence layer
 - Profile-based local configuration with credentials externalized and excluded from version control
@@ -37,7 +37,7 @@ The suite is a full-stack application built around a clean separation between a 
 - Eight dedicated operational views with a cohesive industrial theme and reusable components
 - A dashboard surfacing live equipment and production metrics
 
-The REST API is organized by operational domain, giving each module a clear and independently consumable interface — the same interface an autonomous orchestration layer would later consume programmatically.
+The REST API is organized by operational domain, giving each module a clear and independently consumable interface - the same interface an autonomous orchestration layer would later consume programmatically.
 
 ---
 
